@@ -17,7 +17,7 @@ const MenuPage = () => {
             <p className="text-sm my-8">{category.desc}</p>
             <button
               className={`hidden 2xl:block bg-orange-600 text-white
-              } py-2 px-4 rounded-md`}
+              py-2 px-4 rounded-md hover:text-black transition-all duration-200`}
             >
               Explore
             </button>

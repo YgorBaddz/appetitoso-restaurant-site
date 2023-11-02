@@ -5,7 +5,7 @@ import React from "react";
 
 const CategoryPage = () => {
   return (
-    <div className="flex flex-wrap text-orange-600 ">
+    <div className="flex flex-wrap text-orange-600">
       {pizzas.map((item) => (
         <Link
           className="w-full h-[60vh] border-r-2 border-b-2 border-orange-600 sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group even:bg-fuchsia-50"
@@ -22,7 +22,7 @@ const CategoryPage = () => {
           <div className="flex items-center justify-between font-bold">
             <h1 className="text-2xl uppercase p-2">{item.title}</h1>
             <h2 className="group-hover:hidden text-xl">${item.price}</h2>
-            <button className="hidden group-hover:block uppercase bg-orange-600 text-white p-2 rounded-md">
+            <button className="hidden group-hover:block uppercase bg-orange-600 text-white p-2 rounded-md hover:text-black transition-all duration-200">
               Add To Cart
             </button>
           </div>

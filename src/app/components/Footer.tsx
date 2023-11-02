@@ -7,7 +7,7 @@ const Footer = () => {
       <Link href="/" className="font-bold text-xl">
         APPETITOSO
       </Link>
-      <p>© ALL RIGHTS RESERVED.</p>
+      <p className="text-sm sm:text-base">© ALL RIGHTS RESERVED.</p>
     </div>
   );
 };

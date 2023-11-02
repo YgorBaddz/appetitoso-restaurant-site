@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import CountDown from "./CountDown";
+import { toast } from "react-toastify";
 
 const Offer = () => {
   return (
@@ -15,7 +17,10 @@ const Offer = () => {
           of empowerment. Quickly pontificate parallel.
         </p>
         <CountDown />
-        <button className="bg-orange-600 text-white py-3 px-6 rounded-md">
+        <button
+          onClick={() => toast.success("Added to the cart!")}
+          className="bg-orange-600 text-white py-3 px-6 rounded-md hover:bg-white hover:text-black transition-all duration-200"
+        >
           Order Now
         </button>
       </div>

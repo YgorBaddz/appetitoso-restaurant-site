@@ -1,6 +1,8 @@
+"use client";
 import { featuredProducts } from "@/data";
 import Image from "next/image";
 import React from "react";
+import { toast } from "react-toastify";
 
 const Featured = () => {
   return (
@@ -26,7 +28,10 @@ const Featured = () => {
               </h1>
               <p className="p-4 xl:p-8">{item.desc}</p>
               <span className="text-xl font-bold">{item.price}</span>
-              <button className="bg-orange-600 text-white p-2 rounded-md">
+              <button
+                onClick={() => toast.success("Added to the cart!")}
+                className="bg-orange-600 text-white p-2 rounded-md hover:text-black transition-all duration-200"
+              >
                 Add to Cart
               </button>
             </div>

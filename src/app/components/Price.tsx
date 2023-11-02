@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 type Props = {
   id: number;
@@ -24,11 +25,11 @@ const Price = ({ price, id, options }: Props) => {
       <div className="flex gap-4">
         {options?.map((option, index) => (
           <button
-            className="min-w-[6rem] p-2 ring-1 ring-orange-500 rounded-md"
+            className="min-w-[6rem] p-2 ring-1 ring-orange-500 rounded-md hover:bg-orange-500 hover:text-white transition-all duration-200"
             key={option.title}
             style={{
-              background: selected === index ? "rgb(249 115 22)" : "white",
-              color: selected === index ? "white" : "rgb(249 115 22)",
+              background: selected === index ? "rgb(249 115 22)" : "",
+              color: selected === index ? "white" : "",
             }}
             onClick={() => setSelected(index)}
           >
@@ -56,7 +57,10 @@ const Price = ({ price, id, options }: Props) => {
           </div>
         </div>
         {/* CART BUTTON */}
-        <button className="uppercase w-56 bg-orange-600 text-white p-3 ring-1 ring-orange-600">
+        <button
+          onClick={() => toast.success("Added to the cart!")}
+          className="uppercase w-56 bg-orange-600 text-white p-3 ring-1 ring-orange-600 hover:text-black transition-all duration-200"
+        >
           Add to Cart
         </button>
       </div>

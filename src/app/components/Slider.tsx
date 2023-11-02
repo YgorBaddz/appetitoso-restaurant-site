@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import style from "@/app/cssModules.module.css";
 
 const data = [
   {
@@ -26,7 +28,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setCurrentSlide((prev) => (prev == data.length - 1 ? 0 : prev + 1)),
-      2000
+      4000
     );
     return () => clearInterval(interval);
   }, []);
@@ -38,9 +40,14 @@ const Slider = () => {
         <h1 className="text-5xl text-center uppercase p-4 md:p-10 md:text-6xl xl:text-7xl">
           {data[currentSlide].title}
         </h1>
-        <button className="bg-orange-600 text-white py-4 px-8">
+        <Link
+          href="/menu"
+          className={["bg-orange-600 text-white py-4 px-8", style.slider].join(
+            " "
+          )}
+        >
           Order Now
-        </button>
+        </Link>
       </div>
       {/* IMAGE CONTAINER */}
       <div className="flex-1 relative">

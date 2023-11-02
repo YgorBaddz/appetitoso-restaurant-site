@@ -4,6 +4,8 @@ import "./globals.css";
 import Notification from "./components/Notification";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,7 @@ export default function RootLayout({
         <Notification />
         <Navbar />
         {children}
+        <ToastContainer position="bottom-right" />
         <Footer />
       </body>
     </html>

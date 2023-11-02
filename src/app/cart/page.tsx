@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { toast } from "react-toastify";
 
 const CartPage = () => {
   return (
@@ -57,8 +59,11 @@ const CartPage = () => {
           <span>TOTAL (INCL. VAT)</span>
           <span className="font-bold">$81.40</span>
         </div>
-        <button className="bg-orange-600 text-white p-3 rounded-md w-1/2 self-end">
-          CHECKOUT
+        <button
+          onClick={() => toast.success("Food has been ordered!")}
+          className="bg-orange-600 text-white p-3 rounded-md w-1/2 self-end hover:text-black transition-all duration-200"
+        >
+          Order
         </button>
       </div>
     </div>
